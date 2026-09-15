@@ -250,7 +250,7 @@
     const err = form.querySelector("[data-form-err]");
     const btn = form.querySelector(".form__go");
     const d = Object.fromEntries(new FormData(form));
-    if (!d.name.trim() || !/^[^s@]+@[^s@]+.[^s@]+$/.test(d.email) || !d.brief.trim()) {
+    if (!d.name.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email) || !d.brief.trim()) {
       err.textContent = "Add your name, a valid email and a short brief."; err.dataset.ok = ""; return;
     }
     btn.disabled = true; btn.textContent = "Sending..."; err.textContent = "";
