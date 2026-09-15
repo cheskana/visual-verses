@@ -460,3 +460,5 @@ body { color: var(--sc-ink); font-family: var(--sc-font-text); }
   .phone:nth-child(3) { transform: none; }
   .site, .hand__head { grid-template-columns: 1fr; }
 }
+
+.reel__facts [hidden] { display: none; }
