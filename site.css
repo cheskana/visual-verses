@@ -444,7 +444,7 @@ body { color: var(--sc-ink); font-family: var(--sc-font-text); }
 .h--b { grid-column: 8 / 13; grid-row: span 3; }
 .h--c { grid-column: 1 / 13; grid-row: span 2; }
 
-.studio__art { aspect-ratio: 1; max-width: 34rem; }
+.studio__art { aspect-ratio: 4 / 5; max-width: 34rem; }
 
 @media (max-width: 860px) {
   .method__stage { grid-template-columns: 1fr; align-content: start; gap: 1rem; }
