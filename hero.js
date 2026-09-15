@@ -18,10 +18,10 @@
 
   const SLIDES = [
     { src: "assets/rs-neon.webp", kind: "Brand identity · Rooted Sanctum", title: "A fantasy gaming lounge, fully branded", time: "3 to 4 weeks", price: "$1,600", fx: .5, fy: .35 },
-    { src: "assets/tribemain1.webp", kind: "Brand identity · Tribe Tea Lounge", title: "A kava lounge, cup to campaign", time: "2 to 4 weeks", price: "$900", fx: .5, fy: .5 },
+    { src: "assets/tribemain1.webp", kind: "Brand identity · Tribe Tea Lounge", title: "A kava lounge, cup to campaign", time: "2 to 4 weeks", price: "", fx: .5, fy: .5 },
     { video: "assets/v/draw3.mp4", kind: "Illustration · Portrait study", title: "Drawn by hand, start to finish", time: "2 to 3 weeks", price: "$250", fx: .5, fy: .5 },
     { src: "assets/tribe-drinks.webp", kind: "Social content · Tribe Tea Lounge", title: "Product shoots built for the feed", time: "1 to 2 weeks", price: "$250", fx: .5, fy: .5 },
-    { src: "assets/rs-hoodie.webp", kind: "Merchandise · Rooted Sanctum", title: "The mark, carried onto everything", time: "With your identity", price: "$900", fx: .4, fy: .5 },
+    { src: "assets/rs-hoodie.webp", kind: "Merchandise · Rooted Sanctum", title: "The mark, carried onto everything", time: "With your identity", price: "", fx: .4, fy: .5 },
   ];
 
   /* ---------------- 1 · Field ---------------- */
@@ -261,7 +261,7 @@
     const s = SLIDES[i];
     for (const k of ["kind", "title", "time", "price"]) {
       const el = infoEls[k]; if (!el) continue;
-      el.textContent = s[k]; el.classList.remove("reel__swap"); void el.offsetWidth; el.classList.add("reel__swap");
+      el.textContent = s[k]; if (k === "price") el.parentElement.hidden = !s[k]; el.classList.remove("reel__swap"); void el.offsetWidth; el.classList.add("reel__swap");
     }
   }
   tabs.forEach((t) => t.addEventListener("click", () => { go(+t.dataset.slide); }));
