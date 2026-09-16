@@ -255,7 +255,7 @@
     }
     btn.disabled = true; btn.textContent = "Sending..."; err.textContent = "";
     try {
-      const res = await fetch("https://formsubmit.co/ajax/visualverses.vs@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/hello@visualverses.studio", {
         method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ ...d, _subject: "New project: " + d.type, _replyto: d.email }),
       });
@@ -265,7 +265,7 @@
       err.textContent = "Brief sent. You will hear back soon at the email you gave.";
     } catch (x) {
       err.dataset.ok = "";
-      err.innerHTML = "That did not send. Email <a href=\"mailto:visualverses.vs@gmail.com\">visualverses.vs@gmail.com</a> directly and I will get back to you.";
+      err.innerHTML = "That did not send. Email <a href=\"mailto:hello@visualverses.studio\">hello@visualverses.studio</a> directly and I will get back to you.";
     } finally { btn.disabled = false; btn.textContent = "Send the brief"; }
   });
 })();
