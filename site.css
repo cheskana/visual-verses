@@ -462,3 +462,5 @@ body { color: var(--sc-ink); font-family: var(--sc-font-text); }
 }
 
 .reel__facts [hidden] { display: none; }
+
+.browser img { display: block; width: 100%; height: auto; }
